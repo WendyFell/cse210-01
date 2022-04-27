@@ -12,20 +12,21 @@ board = ['1','2','3','4','5','6','7','8','9']
 empty = [0,1,2,3,4,5,6,7,8]
 
 def main():
-    startGame()
-    # player = 0
-    # while empty and check_win():    
-    #     create_board()
-    #     player_input(player)
-    #     player = int(not player)
-    # if not empty:
-    #     print("NO WINNER!")
+    
+    player = 0
+    while empty and check_win():    
+        create_board()
+        player_input(player)
+        player = int(not player)
+    if not empty:
+        print("NO WINNER!")
 
 def create_board():
     """Make a tic tac toe board with each field using a number for the players to fill in with x or o
     Parameter: none
     Return nothing
-    """    
+    """   
+    print()
     print(f"{board[0]} | {board[1]} | {board[2]}")
     print("--+---+--")
     print(f"{board[3]} | {board[4]} | {board[5]}")
@@ -70,8 +71,10 @@ def check_win():
                     break
             if won:
                 if first_symbol == player_symbol[0]:
+                    create_board()
                     print('player 1 won')
                 else:
+                    create_board()
                     print('player 2 won')
                 break
         else:
