@@ -1,17 +1,7 @@
 """
 Tic-Tac_Toe game
-Author: Wendy Fellows referencing code from pencilprogramming.com
-Your program must also meet the following requirements.
-The program must have a comment with assignment and author names.
-The program must have at least one if/then block.
-The program must have at least one while loop.
-The program must have more than one function.
-The program must have a function called main.
+Author: Wendy Fellows with a little help from pencilprogramming.com
 """
-
-
-
-
 
 def main():
     print()
@@ -36,10 +26,7 @@ def main():
             playgame = False
             print("Thank you for playing today!")
             break
-      
-       
-
-
+ 
 def create_board(board):
     """Make a tic tac toe board with each field using a number for the players to fill in with x or o
     Parameter: none
@@ -51,6 +38,7 @@ def create_board(board):
     print(f"{board[3]} | {board[4]} | {board[5]}")
     print("--+---+--")
     print(f"{board[6]} | {board[7]} | {board[8]}")
+
 
 def player_input(player, board, empty):
     """Function to ask player to enter a number on the board to enter their X or O according to which player they are. Then puts the X or O into the correct spot on the board.
@@ -112,6 +100,7 @@ def check_win(board):
         return 0
     else:
         return 1
+
 
 def play_again():
     """Function to ask if players would like to play again.
